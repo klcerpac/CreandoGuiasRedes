@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UNICODE" ?>
+<topo version="1.2.00.510">
+    <devices>
+        <dev id="7A71F2D7-A964-496f-8B91-7E1122C5457D" name="STA1" poe="0" model="STA" settings=" -simsta_ip 0.0.0.0  -simsta_mask 0.0.0.0  -simsta_gateway 0.0.0.0  -simsta_mac 54-89-98-A7-7D-85  -simsta_check 0 " system_mac="54-89-98-A7-7D-85" com_port="0" bootmode="1" cx="476.000000" cy="289.000000" edit_left="503" edit_top="343">
+            <slot number="slot17" isMainBoard="1" />
+        </dev>
+        <dev id="B33BF7EB-3788-4d7e-B329-E8DB84191D8F" name="Cellphone1" poe="0" model="Cellphone" settings=" -simsta_ip 0.0.0.0  -simsta_mask 0.0.0.0  -simsta_gateway 0.0.0.0  -simsta_mac 54-89-98-BB-02-CD  -simsta_check 0 " system_mac="54-89-98-BB-02-CD" com_port="0" bootmode="1" cx="741.000000" cy="297.000000" edit_left="768" edit_top="351">
+            <slot number="slot17" isMainBoard="1" />
+        </dev>
+        <dev id="92F75732-8BAD-4938-9032-F5754C0E4183" name="AP1" poe="0" model="AP2050" settings=" -apMac 00-E0-FC-5B-31-B0 -apSN 2102354483108820EB7C" system_mac="00-E0-FC-5B-31-B0" com_port="2000" bootmode="0" cx="477.000000" cy="97.000000" edit_left="504" edit_top="151">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="5" />
+            </slot>
+        </dev>
+        <dev id="29BBD888-52A7-43de-88F9-B6CEE6AE7107" name="PC1" poe="0" model="PC" settings=" -simpc_ip 0.0.0.0  -simpc_mask 0.0.0.0  -simpc_gateway 0.0.0.0  -simpc_mac 54-89-98-3A-2A-98  -simpc_mc_dstip 0.0.0.0  -simpc_mc_dstmac 00-00-00-00-00-00  -simpc_dns1 0.0.0.0  -simpc_dns2 0.0.0.0  -simpc_ipv6 ::  -simpc_prefix 128  -simpc_gatewayv6 ::  -simpc_dhcp_state 0  -simpc_dhcpv6_state 0  -simpc_dns_auto_state 0  -simpc_igmp_version 1  -simpc_group_ip_start 0.0.0.0  -simpc_src_ip_start 0.0.0.0  -simpc_group_num 0  -simpc_group_step 0  -simpc_src_num 0  -simpc_src_step 0  -simpc_type MODE_IS_INCLUDE " system_mac="54-89-98-3A-2A-98" com_port="0" bootmode="1" cx="254.000000" cy="294.000000" edit_left="281" edit_top="348">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="Ethernet" count="1" />
+            </slot>
+        </dev>
+    </devices>
+    <lines />
+    <shapes />
+    <txttips />
+</topo>
