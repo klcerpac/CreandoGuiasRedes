@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UNICODE" ?>
+<topo version="1.2.00.510">
+    <devices />
+    <lines />
+    <shapes />
+    <txttips />
+</topo>
+<paper>
+    <PaperID>5E0A52DA-3416-4269-9B4F-68BC2AC554ED</PaperID>
+    <PaperUses>0</PaperUses>
+    <TimeMode>0</TimeMode>
+    <LimitedTimes>0</LimitedTimes>
+    <TimeLeft>0</TimeLeft>
+    <LockPaper>0</LockPaper>
+    <AnswerAfterTimeOut>0</AnswerAfterTimeOut>
+</paper>
