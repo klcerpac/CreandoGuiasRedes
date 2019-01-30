@@ -1,0 +1,56 @@
+Commando Packet Tracer Configuración de un Switch
+
+Definir los protocolos telnet ssh
+
+Entrar a CLI y dar enter cuando este completamente cargado la ventana de dialogo
+
+Para habilitar la entrada por teclado del Switche
+--> enable
+
+Existen tres tipos de usuario dentro de la linea de comandos
+1. Usuario Normal ( > )
+2. Usuario Privilegiado ( # ), es un modo de solo lectura
+    Para saber los comandos que se pueden utilizar en modo Privilegiado le damos --> ? < y luego enter, y nos mostrala el listado
+3. Modo de configuración global ( "name"(config)# )
+
+Con el comando:
+--> show running config
+Podemos ver todas las configuraciones actuales del Switch
+
+Para entrar en la configuracion global de Switche
+--> configure terminal
+
+CONFIGURACONES BÁSICAS
+
+Se cambia el Nombre del Switche
+--> hostname "nombre"
+
+Se agrega una contraseña
+--> enable password "constaseña_switch"
+
+Agregarle claves a las lineas de consola, es como el puerto serial
+--> line console "#puerto_consola" (Para el 2960 es solo el puerto 0)
+--> "name"(config-line)# password "contraseña_puerto"
+--> login (este comando sirve para guardar los cambios que se hacen a contraseñas)
+
+Consultar que es un puerto vty (un 2960 tiene 16 puertos vty)
+--> line vty (# que quiera aplicar, para un rango sería line vty #puerto_min #puerto_max)
+--> password "contraseña_puertos_especificos"
+--> login
+--> exit (salir de un modo de configuración)
+
+Para encriptar contraseña se pueden realizar de dos maneras (ambas en modo de configuración):
+1. --> enable secret "contraseña"
+Para inhabilitar una contraseña le damos --> no enable password
+
+2. --> service password-encryption, encripta todas las contraseñas que se encuentren en texto plano
+
+Cuando se apaga el Switch y se vuelve a encender se borran todas las configuraciones, entonces para grabarlas escribimos:
+--> write (Modo Privilegiado)
+--> do write (Modo Configuración global)
+
+Para poder agregar un mensaje que se mostrará a la hora de iniciar sesión escribimos el siguiente commando (sin eñes ni tildes):
+--> banner motd #"mensaje"#
+
+IMPORTANTE: Desactivar búsqueda DNS, esto significaque cuando se escribe cualquier comando lo que trata de hacer es buscar este comando en un nombre de dominio (url) que coincida con esto, para deshabilitar esta búsqueda ejecutamos el siguiente comando:
+--> "nombre"(config)# no ip domain-lookup
