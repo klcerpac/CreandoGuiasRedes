@@ -1,4 +1,4 @@
-Commando Packet Tracer Configuración de un Switch
+﻿Commando Packet Tracer Configuración de un Switch
 
 Definir los protocolos telnet ssh
 
@@ -26,7 +26,7 @@ Se cambia el Nombre del Switche
 --> hostname "nombre"
 
 Se agrega una contraseña
---> enable password "constaseña_switch"
+--> enable password "contraseña_switch"
 
 Agregarle claves a las lineas de consola, es como el puerto serial
 --> line console "#puerto_consola" (Para el 2960 es solo el puerto 0)
