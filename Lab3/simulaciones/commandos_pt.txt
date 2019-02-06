@@ -54,3 +54,6 @@ Para poder agregar un mensaje que se mostrará a la hora de iniciar sesión escr
 
 IMPORTANTE: Desactivar búsqueda DNS, esto significaque cuando se escribe cualquier comando lo que trata de hacer es buscar este comando en un nombre de dominio (url) que coincida con esto, para deshabilitar esta búsqueda ejecutamos el siguiente comando:
 --> "nombre"(config)# no ip domain-lookup
+
+CONEXIÓN POR SSH:
+

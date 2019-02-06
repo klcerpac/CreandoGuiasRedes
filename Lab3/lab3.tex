@@ -14,6 +14,7 @@
 \usepackage{nccmath}
 \usepackage{caption}
 \usepackage{url}
+\usepackage{listings}
 
 \title{\textbf{SWITCHES}}
 
@@ -46,9 +47,73 @@ Fuera de esto también se pueden realizar cambios para mejorar la red, a través
 
 \section{SWITCH}
 Un Switch que traducido al español para el área de red es un \textit{Conmutador} lo cual es un dispositivo cuya función es añadir funcionalidades, mejoras, control a una red LAN, además de interconectar los dispositivos que hagan parte de esta red.
-Un Switche posee diversos puertos, tanto fisicos como lógicos...
+Fotoooooooooooooooo
 
-\section{CISCO 2960}
-Descripción de la referencia con foto y  configuración del switch en packet tracer
+\section{Manejo de Switches en Packet Tracer}
+
+\subsection{Comandos Básicos}
+Entramos a Packet Tracer y agregamos al área de trabajo en Switch Cisco 2960, luego vamos a la pestaña CLI y observaremos algo semejante a:
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.5]{cli.jpg}
+	\caption{CLI en Packet Tracer}
+\end{figure}
+
+¿Qué es el CLI?, CLI (Command Line Interface) es una interfaz de linea de comandos que permite configurar un dispostivo de red. Allí podremos cambiar las configuraciones y poder tener control del dispositivo.
+
+Para habilitar la entrada de comandos ingresamos la siguiente instrucción:
+\begin{lstlisting}[frame=single]
+enable	
+\end{lstlisting}
+
+Existe tres tipos de usuarios dentro del CLI, los cuales son:
+\begin{enumerate}
+	\item Usuario Normal ( $>$ )
+	\item Usuario Privilegiado ($\#$), es un modo de solo lectura. \\
+	Para saber los comandos que se pueden usar en modo privilegiado ingresamos el siguiente comando "\textit{?}"
+	\item Modo de configuración global ("nombre\_del\_dispositivo"(config)$\#$)
+\end{enumerate}
+
+\newpage
+
+Para ver todas las configuraciones actuales de Switch ingresamos el comando:
+\begin{lstlisting}[frame=single]
+	show running config
+\end{lstlisting}
+
+Para entrar al usuario de modo de configuración global ingresamos:
+\begin{lstlisting}[frame=single]
+	configure terminal
+\end{lstlisting}
+
+\subsection{Configuraciones Básicas}
+Cuando se administan redes se requiere de poder realizar una configuración remota al Switch, siempre por el protocolo SSH, por lo tanto en estas configuraciones básicas mostradas a continuación se incluyen también las configuraciones básicas que se requieren tanto para el Switch como para la conexión SSH
+Para configurar un Switch debemos ingresar al usuario de configuración global.
+\begin{enumerate}
+	
+	\item[SW] Cambiar el nombre del switch
+	\begin{lstlisting}[frame=single]
+hostname "nombre"
+	\end{lstlisting}
+	
+	\item[SSH] Configurar un nombre de dominio
+	\begin{lstlisting}[frame=single]
+ip domain name "nombre_del_dominio"
+	\end{lstlisting}
+	
+	\item[SSH] Generar clave de encriptación para SSH
+	\begin{lstlisting}[frame=single]
+crypto key generate rsa
+	\end{lstlisting}
+	
+	\item[SSH] Definir la cantidad de bits para la llave, en este caso ingresamos 2048bits que es el tipo más fuerte de encriptación
+	\begin{lstlisting}[frame=single]
+How many bits in the modulus: 2048
+	\end{lstlisting}
+	
+	
+	
+\end{enumerate}
 	
 \end{document}
