@@ -1,0 +1,5 @@
+Nombre: SWLAN
+PSWD: 12345
+
+https://www.techopedia.com/definition/1884/virtual-teletype-vty
+delete flash:vlan.dat

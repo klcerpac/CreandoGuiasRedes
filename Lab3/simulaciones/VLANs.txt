@@ -1,0 +1,27 @@
+VLAN (Virtual Local Area Network), el obejtivo de las VLANs es disminuir costos a la hora de diseñar subredes, esto permite ahorrar más dispositivos para poder dividir una red
+
+Mostrar cuantas redes VLANs pueden ser creadas
+--> vlan ?
+
+Crear 2 VLAN
+--> vlan "#asociado"
+Aquí se nos muestra el entorno de configuración de VLAN (config-vlan)
+
+Asignar nombre
+--> name "nombre"
+
+Y luego salimos del modo de configuración de VLAN
+
+Y luego se debe entrar al modo de interfaz de VLAN para activarlas automáticamente
+--> interface vlan "#vlan"
+
+Luego asignamos los puertos a cada VLAN
+--> interface range fa0/1-10
+--> switchport mode access (habilita los puertos en modo de acceso)
+--> switchport access vlan 200
+--> no shutdown
+
+Se recomienda que todo puerto o interfaz que no va a ser utilizado esté apagado
+Para apagar un puerto --> shutdown dentro de la interfaz del rango-
+Para entrar a la interfaz de un solo puerto solo quitamos la palabra range, quedando así:
+--> interface fa0/x o gi0/x
