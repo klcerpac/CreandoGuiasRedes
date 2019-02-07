@@ -1,0 +1,86 @@
+En ensp existen 2 tipos de vistas.
+\begin{enumerate}
+\item Vista de usuario( <> ).
+\item Vista de sistema( [] ): es el modo de configuración global.\\
+En cualquiera de las vistas para saber que comandos se pueden utilizar ingresamos el comando “?”.
+Para ver las configuraciones actuales del switch ingresar el comando 
+\begin{lstlisting}[frame=single]
+display current-configuration
+\end{lstlisting}
+
+Para entrar a la vista de sistema ingresamos:
+\begin{lstlisting}[frame=single]
+System-view
+\end{lstlisting}
+\end{enumerate}
+\begin{enumerate}
+\item Asignar un nombre al switch.
+\begin{lstlisting}[frame=single]
+sysname "nombre"
+\end{lstlisting}
+
+\item Asignar una contraseña. 
+\begin{lstlisting}[frame=single]
+Aaa
+Local-user "usuario" password cipher "contrasena"
+\end{lstlisting}
+
+\item Crear vlan.
+\begin{lstlisting}[frame=single]
+Vlan batch 2 3 // vlan 2 
+\end{lstlisting}
+
+\item Luego de creadas las VLANs debemos asignar los puertos físicos que van a estar asociados a cada VLAN, debemos acceder al puerto o rango de puertos que vamos a configurar en la interfaz, para esto ingresamos el siguiente comando:
+\begin{lstlisting}[frame=single]
+Interface Ethernet 0/0/\# 
+\end{lstlisting}
+
+\#  \textbf{es el número del puerto, en los puertos gigaethernet es el mismo procedimiento}
+\item Habilitamos cada puerto en modo acceso
+\begin{lstlisting}[frame=single]
+Port link-type Access
+\end{lstlisting}
+
+\item Asignamos el puerto a la vlan que se requiera:
+\begin{lstlisting}[frame=single]
+Port defaul vlan \#
+\end{lstlisting}
+
+\# \textbf{el numero de la vlan a la que se quiere asignar el Puerto.}
+
+\item Especificamos que los puertos estén encendidos (normalmente están encendidos pero para asegurarnos )
+\begin{lstlisting}[frame=single]
+Undo shutdown
+\end{lstlisting}
+
+\item Finalmente salimos de la vista de sistema con el comando:
+\begin{lstlisting}[frame=single]
+quit
+\end{lstlisting}
+
+\item Y estando en la vista de usuario guardamos la configuración.
+\begin{lstlisting}[frame=single]
+save
+\end{lstlisting}
+
+\item Para verificar que la configuración quedo guardada volvemos a  la vista de sistema y digitamos el comando:
+\begin{lstlisting}[frame=single]
+display current-configuration
+\end{lstlisting}
+
+\end{enumerate}
+\subsection{\textbf{Confirmar Configuración}}
+Luego de realizada una configuración básica debemos de revisar que la configuración está correcta, para esto agregamos dispositivos a la red y los conectamos a diferentes puertos asociados a diferentes VLANs y no debe haber comunicación entre dispositivos de diferentes VLANs. \\ \\
+
+<<<<<<< HEAD
+En la siguiente imágen se propone una red de prueba con cuatro VLANs diferentes:
+
+=======
+En la  imágen de la figura 3 se propone una red de prueba con cuatro VLANs diferentes:
+\newpage
+>>>>>>> bd1d6de7ea83726bc645da5c249e41358b5a031b
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.6]{2.jpg}
+	\caption{Red de Prueba para VLANs en eNSP}
+\end{figure}

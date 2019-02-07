@@ -50,7 +50,22 @@ Un Switch que traducido al español para el área de red es un \textit{Conmutado
 Fotoooooooooooooooo
 
 \section{\textbf{¿Qué es una VLAN?}}
-Una VLAN (Virtual Local Area Network) es una red de área local virtual que se pueden crear en dispositivos de red de con el objetivo de disminuir costos a la hora de diseñar subredes, esto permite generar ahorro en dispositivos activos para poder dividir una red
+Una VLAN (Virtual Local Area Network) es una red de área local virtual que se pueden crear en dispositivos de red. \\
+Algunas ventajas que obtenemos al crear VLANs son:
+\begin{enumerate}
+	\item Seguridad
+	\item Reducción de costos
+	\item Superior rendimiento (broadcast domain)
+\end{enumerate}
+
+Los tipos de VLANs más comunes que se pueden encontrar en el diseño y administración de redes son:
+\begin{itemize}
+	\item VLAN de Datos
+	\item VLAN Predeterminada
+	\item VLAN de Admnistración
+	\item VLAN Nativa
+	\item VLAN de Voz
+\end{itemize}
 
 \section{\textbf{Manejo de Switches en Packet Tracer}}
 
@@ -67,7 +82,7 @@ Entramos a Packet Tracer y agregamos al área de trabajo en Switch Cisco 2960, l
 
 Para habilitar la entrada de comandos ingresamos la siguiente instrucción:
 \begin{lstlisting}[frame=single]
-enable	
+enable
 \end{lstlisting}
 
 Existe tres tipos de usuarios dentro del CLI, los cuales son:
@@ -80,12 +95,12 @@ Existe tres tipos de usuarios dentro del CLI, los cuales son:
 
 Para ver todas las configuraciones actuales de Switch ingresamos el comando:
 \begin{lstlisting}[frame=single]
-	show running-config
+show running-config
 \end{lstlisting}
 
 Para entrar al usuario de modo de configuración global ingresamos:
 \begin{lstlisting}[frame=single]
-	configure terminal
+configure terminal
 \end{lstlisting}
 
 \subsection{\textbf{Configuraciones Básicas}}
@@ -175,5 +190,94 @@ En la siguiente imágen se propone una red de prueba con tres VLANs diferentes:
 \end{figure}
 
 \section{\textbf{Manejo de Switches en eNSP}}
+En ensp existen 2 tipos de vistas.
+\begin{enumerate}
+	\item Vista de usuario( <  > ).
+	\item Vista de sistema( [ ] ): es el modo de configuración global.\\
+	En cualquiera de las vistas para saber que comandos se pueden utilizar ingresamos el comando "?".
+	Para ver las configuraciones actuales del switch ingresar el comando 
+	\begin{lstlisting}[frame=single]
+display current-configuration
+	\end{lstlisting}
 	
+	Para entrar a la vista de sistema ingresamos:
+	\begin{lstlisting}[frame=single]
+system-view
+	\end{lstlisting}
+\end{enumerate}
+\begin{enumerate}
+	\item Asignar un nombre al switch.
+	\begin{lstlisting}[frame=single]
+sysname "nombre"
+	\end{lstlisting}
+	
+	\item Asignar una contraseña (los siguientes comandos todos son en la misma línea de instraucción). 
+	\begin{lstlisting}[frame=single]
+Aaa
+local-user "usuario" 
+password cipher "contrasena"
+	\end{lstlisting}
+	
+	\item Crear vlan.
+	\begin{lstlisting}[frame=single]
+Vlan batch 2 3 // vlan 2 
+	\end{lstlisting}
+	
+	\item Luego de creadas las VLANs debemos asignar los puertos físicos que van a estar asociados a cada VLAN, debemos acceder al puerto o rango de puertos que vamos a configurar en la interfaz, para esto ingresamos el siguiente comando:
+	\begin{lstlisting}[frame=single]
+interface Ethernet 0/0/\# 
+	\end{lstlisting}
+	
+	\#  \textbf{es el número del puerto, en los puertos gigaethernet es el mismo procedimiento}
+	\item Habilitamos cada puerto en modo acceso
+	\begin{lstlisting}[frame=single]
+port link-type Access
+	\end{lstlisting}
+	
+	\item Asignamos el puerto a la vlan que se requiera:
+	\begin{lstlisting}[frame=single]
+port defaul vlan \#
+	\end{lstlisting}
+	
+	\# \textbf{el numero de la vlan a la que se quiere asignar el Puerto.}
+	
+	\item Especificamos que los puertos estén encendidos (normalmente están encendidos pero para asegurarnos )
+	\begin{lstlisting}[frame=single]
+undo shutdown
+	\end{lstlisting}
+	
+	\item Finalmente salimos de la vista de sistema con el comando:
+	\begin{lstlisting}[frame=single]
+quit
+	\end{lstlisting}
+	
+	\item Y estando en la vista de usuario guardamos la configuración.
+	\begin{lstlisting}[frame=single]
+save
+	\end{lstlisting}
+	
+	\item Para verificar que la configuración quedo guardada volvemos a  la vista de sistema y digitamos el comando:
+	\begin{lstlisting}[frame=single]
+display current-configuration
+	\end{lstlisting}
+	
+\end{enumerate}
+
+\newpage
+
+\subsection{\textbf{Confirmar Configuración}}
+Luego de realizada una configuración básica debemos de revisar que la configuración está correcta, para esto agregamos dispositivos a la red y los conectamos a diferentes puertos asociados a diferentes VLANs y no debe haber comunicación entre dispositivos de diferentes VLANs. \\
+
+En la imagen \ref{ensp} se propone una red de prueba con cuatro VLANs diferentes:
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.5]{2.jpg}
+	\caption{Red de Prueba para VLANs en eNSP}
+	\label{ensp}
+\end{figure}
+
+\section{Ejercicios}
+Lectura previa de los protocolos SSH y STP
+
 \end{document}

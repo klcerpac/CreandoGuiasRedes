@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.12)  6 FEB 2019 19:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.12)  7 FEB 2019 09:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -515,23 +515,23 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/sc' in size <10> not available
 <cli.jpg, id=1, 552.0625pt x 513.92pt>
 File: cli.jpg Graphic file (type jpg)
 <use cli.jpg>
-Package pdftex.def Info: cli.jpg  used on input line 62.
+Package pdftex.def Info: cli.jpg  used on input line 77.
 (pdftex.def)             Requested size: 276.03056pt x 256.95937pt.
 
-Overfull \hbox (24.03056pt too wide) in paragraph at lines 62--63
+Overfull \hbox (24.03056pt too wide) in paragraph at lines 77--78
  [][] 
  []
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 75.
+LaTeX Font Info:    Try loading font information for U+msa on input line 90.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 75.
+LaTeX Font Info:    Try loading font information for U+msb on input line 90.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 78--79
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
 []\T1/ptm/m/n/10 Modo de con-fi-gu-ra-ción glo-bal
  []
 
@@ -539,37 +539,52 @@ Underfull \hbox (badness 10000) in paragraph at lines 78--79
 
 
  <./cli.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 167--168
+Underfull \hbox (badness 10000) in paragraph at lines 182--183
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--168
+Underfull \hbox (badness 10000) in paragraph at lines 182--183
 
  []
 
 <red_prueba.jpg, id=14, 955.57pt x 436.63126pt>
 File: red_prueba.jpg Graphic file (type jpg)
 <use red_prueba.jpg>
-Package pdftex.def Info: red_prueba.jpg  used on input line 173.
+Package pdftex.def Info: red_prueba.jpg  used on input line 188.
 (pdftex.def)             Requested size: 258.00734pt x 117.89201pt.
 
-Overfull \hbox (6.00734pt too wide) in paragraph at lines 173--174
+Overfull \hbox (6.00734pt too wide) in paragraph at lines 188--189
  [][] 
  []
 
-[2 <./red_prueba.jpg>] (./lab3.aux
+[2 <./red_prueba.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 269--270
+
+ []
+
+<2.jpg, id=18, 545.78906pt x 289.83281pt>
+File: 2.jpg Graphic file (type jpg)
+<use 2.jpg>
+Package pdftex.def Info: 2.jpg  used on input line 275.
+(pdftex.def)             Requested size: 272.89386pt x 144.91605pt.
+
+Overfull \hbox (20.89386pt too wide) in paragraph at lines 275--276
+ [][] 
+ []
+
+[3 <./2.JPG>] (./lab3.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 ) ) 
 Here is how much of TeX's memory you used:
- 7488 strings out of 492616
- 109104 string characters out of 6128967
- 212082 words of memory out of 5000000
- 11287 multiletter control sequences out of 15000+600000
+ 7503 strings out of 492616
+ 109271 string characters out of 6128967
+ 212090 words of memory out of 5000000
+ 11301 multiletter control sequences out of 15000+600000
  112969 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,6n,39p,503b,1090s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,6n,39p,503b,1658s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/
 texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/t
 exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/tex
@@ -578,10 +593,10 @@ ive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/t
 exmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2018/texmf-dist
 /fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/typ
 e1/urw/times/utmri8a.pfb>
-Output written on lab3.pdf (2 pages, 168935 bytes).
+Output written on lab3.pdf (3 pages, 219976 bytes).
 PDF statistics:
- 42 PDF objects out of 1000 (max. 8388607)
- 28 compressed objects within 1 object stream
+ 46 PDF objects out of 1000 (max. 8388607)
+ 30 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
