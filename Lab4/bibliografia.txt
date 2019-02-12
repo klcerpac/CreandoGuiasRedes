@@ -1,0 +1,6 @@
+http://www.seaccna.com/trunk-o-troncal/
+https://www.ssh.com/ssh/protocol/
+https://es.wikipedia.org/wiki/Spanning_tree
+
+
+STP / RSTP calcula el costo de la ruta para seleccionar el enlace sólido y bloquea los enlaces redundantes para recortar la red en una topología de árbol libre de bucles.
